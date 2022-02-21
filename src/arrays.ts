@@ -1,4 +1,4 @@
-import { Color } from "react-bootstrap/esm/types";
+//import { Color } from "react-bootstrap/esm/types";
 
 /**
  * Consume an array of numbers, and return a new array containing
