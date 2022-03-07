@@ -10,22 +10,23 @@ const PEOPLE = [
     "Margaret Hamilton"
 ];
 
+interface setTeamState {
+    setTeam: (newOptions: string[]) => void;
+    team: string[];
+}
+
 export function ChooseTeam(): JSX.Element {
     const [allOptions, setAllOptions] = useState<string[]>(PEOPLE);
     const [team, setTeam] = useState<string[]>([]);
 
-    function chooseMember() {
-        /*
+    function chooseMember({ setTeam, team }: setTeamState, newMember: string) {
         if (!team.includes(newMember)) {
-            team.push(newMember);
+            setTeam([...team, newMember]);
         }
-        */
     }
 
-    function clearTeam() {
-        /*
-        team = [];
-        */
+    function clearTeam({ setTeam }: setTeamState) {
+        setTeam([]);
     }
 
     return (
@@ -36,7 +37,12 @@ export function ChooseTeam(): JSX.Element {
                     {allOptions.map((option: string) => (
                         <div key={option} style={{ marginBottom: "4px" }}>
                             Add{" "}
-                            <Button onClick={chooseMember} size="sm">
+                            <Button
+                                onClick={() =>
+                                    chooseMember({ setTeam, team }, option)
+                                }
+                                size="sm"
+                            >
                                 {option}
                             </Button>
                         </div>
@@ -47,7 +53,9 @@ export function ChooseTeam(): JSX.Element {
                     {team.map((member: string) => (
                         <li key={member}>{member}</li>
                     ))}
-                    <Button onClick={clearTeam}>Clear Team</Button>
+                    <Button onClick={() => clearTeam({ setTeam, team })}>
+                        Clear Team
+                    </Button>
                 </Col>
             </Row>
         </div>
