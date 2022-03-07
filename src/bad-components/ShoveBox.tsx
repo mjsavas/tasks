@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
-interface boxState {
-    setPosition: (position: number) => void;
+interface moveBox {
     position: number;
 }
-
 function ShoveBoxButton({
     position,
     setPosition
@@ -18,7 +16,7 @@ function ShoveBoxButton({
     );
 }
 
-function MoveableBox({ position, setPosition }: boxState): JSX.Element {
+function MoveableBox({ position }: moveBox): JSX.Element {
     return (
         <div
             data-testid="moveable-box"
@@ -47,10 +45,7 @@ export function ShoveBox(): JSX.Element {
                     position={position}
                     setPosition={setPosition}
                 ></ShoveBoxButton>
-                <MoveableBox
-                    position={position}
-                    setPosition={setPosition}
-                ></MoveableBox>
+                <MoveableBox position={position}></MoveableBox>
             </div>
         </div>
     );
