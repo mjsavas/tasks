@@ -19,30 +19,22 @@ PASS src/form-components/GiveAttempts.test.tsx
   ● Console
 
     console.error
-      Error: Expected key descriptor but found "" in ""
-          See https://github.com/testing-library/user-event/blob/main/README.md#keyboardtext-options
-          for more information about how userEvent parses your input.
-          at assertDescriptor (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:140:11)
-          at readPrintableChar (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:98:3)
-          at readNextDescriptor (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:92:23)
-          at getNextKeyDef (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:53:7)
-          at keyboardImplementation (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/keyboardImplementation.js:38:106)
-          at keyboardImplementationWrapper (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/keyboard/index.js:55:65)
-          at typeImplementation (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/type/typeImplementation.js:49:51)
-          at Object.type (/home/runner/work/tasks/tasks/node_modules/@testing-library/user-event/dist/type/index.js:27:60)
-          at Object.<anonymous> (/home/runner/work/tasks/tasks/src/form-components/GiveAttempts.test.tsx:42:19)
-          at Promise.then.completed (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/utils.js:391:28)
-          at new Promise (<anonymous>)
-          at callAsyncCircusFn (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/utils.js:316:10)
-          at _callCircusTest (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/run.js:218:40)
-          at _runTest (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/run.js:155:3)
-          at _runTestsForDescribeBlock (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/run.js:66:9)
-          at _runTestsForDescribeBlock (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/run.js:60:9)
-          at run (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/run.js:25:3)
-          at runAndTransformResultsToJestFormat (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
-          at jestAdapter (/home/runner/work/tasks/tasks/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
-          at runTestInternal (/home/runner/work/tasks/tasks/node_modules/jest-runner/build/runTest.js:389:16)
-          at runTest (/home/runner/work/tasks/tasks/node_modules/jest-runner/build/runTest.js:475:34)
+      Warning: Received NaN for the `value` attribute. If this is expected, cast the value to a string.
+          at input
+          at /home/runner/work/tasks/tasks/node_modules/react-bootstrap/cjs/FormControl.js:27:3
+          at div
+          at /home/runner/work/tasks/tasks/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at GiveAttempts (/home/runner/work/tasks/tasks/src/form-components/GiveAttempts.tsx:10:39)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at validateProperty$1 (node_modules/react-dom/cjs/react-dom.development.js:3492:7)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom.development.js:3559:21)
+      at validateProperties$2 (node_modules/react-dom/cjs/react-dom.development.js:3583:3)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom.development.js:8765:5)
+      at diffProperties (node_modules/react-dom/cjs/react-dom.development.js:9172:5)
+      at prepareUpdate (node_modules/react-dom/cjs/react-dom.development.js:10215:10)
 
 PASS src/form-components/ChangeColor.test.tsx
   ● Console
@@ -68,12 +60,13 @@ PASS src/components/Counter.test.tsx
 PASS src/components/RevealAnswer.test.tsx
 PASS src/bad-components/ColoredBox.test.tsx
 PASS src/bad-components/ShoveBox.test.tsx
+PASS src/quizzer/Quizzer.test.tsx
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |   97.92 |    94.44 |   99.22 |   97.76 |                   
+All files                    |   97.93 |    95.37 |   99.23 |   97.76 |                   
  src                         |   97.19 |    94.11 |   98.63 |   96.89 |                   
-  App.tsx                    |       0 |      100 |       0 |       0 | 21                
+  App.tsx                    |       0 |      100 |       0 |       0 | 22                
   arrays.ts                  |     100 |    94.73 |     100 |     100 | 96                
   functions.ts               |     100 |      100 |     100 |     100 |                   
   nested.ts                  |    96.1 |    88.88 |     100 |   95.71 | 215,252,276       
@@ -90,19 +83,21 @@ All files                    |   97.92 |    94.44 |   99.22 |   97.76 |
   RevealAnswer.tsx           |     100 |      100 |     100 |     100 |                   
   StartAttempt.tsx           |     100 |      100 |     100 |     100 |                   
   TwoDice.tsx                |     100 |      100 |     100 |     100 |                   
- src/form-components         |     100 |    91.66 |     100 |     100 |                   
+ src/form-components         |     100 |      100 |     100 |     100 |                   
   ChangeColor.tsx            |     100 |      100 |     100 |     100 |                   
   CheckAnswer.tsx            |     100 |      100 |     100 |     100 |                   
   EditMode.tsx               |     100 |      100 |     100 |     100 |                   
-  GiveAttempts.tsx           |     100 |       50 |     100 |     100 | 18                
+  GiveAttempts.tsx           |     100 |      100 |     100 |     100 |                   
   MultipleChoiceQuestion.tsx |     100 |      100 |     100 |     100 |                   
  src/interfaces              |       0 |        0 |       0 |       0 |                   
   answer.ts                  |       0 |        0 |       0 |       0 |                   
   question.ts                |       0 |        0 |       0 |       0 |                   
+ src/quizzer                 |     100 |      100 |     100 |     100 |                   
+  Quizzer.tsx                |     100 |      100 |     100 |     100 |                   
 -----------------------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 19 passed, 19 total
-Tests:       133 passed, 133 total
+Test Suites: 20 passed, 20 total
+Tests:       134 passed, 134 total
 Snapshots:   0 total
-Time:        14.202 s
+Time:        10.502 s
 Ran all test suites.
